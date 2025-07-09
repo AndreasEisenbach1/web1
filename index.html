@@ -3,52 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine einfache Webseite</title>
+    <title>Meine Moderne Unternehmenswebsite</title>
+    <!-- Tailwind CSS CDN für einfache Integration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter für eine moderne Typografie -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Grundlegende Schriftart für den gesamten Körper */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+            font-family: 'Inter', sans-serif;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            color: #0056b3;
-            margin-bottom: 15px;
-        }
-        p {
-            line-height: 1.6;
-            text-align: justify;
-        }
+        /* Zusätzliche, spezifische Stile können hier hinzugefügt werden, falls nötig */
+        /* Beachten Sie, dass Tailwind die meisten Stile direkt über Klassen bietet */
     </style>
 </head>
-<body>
-    <div class="container">
-        <img src="https://via.placeholder.com/600x400?text=Dein+Bild+hier" alt="Platzhalterbild">
+<body class="bg-gray-50 text-gray-800">
 
-        <h1>Hallo Liesel!</h1>
+    <!-- Header / Navigation Bar -->
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <!-- Logo oder Firmenname -->
+            <a href="#" class="text-2xl font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition duration-300">
+                Ihr Logo
+            </a>
+            <!-- Navigationslinks (für größere Bildschirme) -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">Startseite</a>
+                <a href="#about" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">Über Uns</a>
+                <a href="#services" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">Dienstleistungen</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 font-medium transition duration-300">Kontakt</a>
+            </div>
+            <!-- Mobiles Menü-Icon (Hamburger) -->
+            <div class="md:hidden">
+                <button class="text-gray-600 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
 
-        <p>
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 md:py-32 text-center shadow-lg">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                Innovative Lösungen für Ihr Unternehmen
+            </h1>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                Wir helfen Ihnen, Ihre Ziele zu erreichen und Ihr Geschäft mit maßgeschneiderten Strategien und modernster Technologie voranzutreiben.
+            </p>
+            <a href="#contact" class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300 ease-in-out transform">
+                Jetzt Kontakt aufnehmen
+            </a>
+        </div>
+    </section>
 
-        </p>
-        <p>
-            Viel Spaß.
-        </p>
-    </div>
+    <!-- About Us Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Über Uns</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/818CF8/FFFFFF?text=Unser+Team" alt="Unser Team" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 text-left">
+                    <p class="text-lg leading-relaxed mb-6">
+                        Wir sind ein engagiertes Team von Experten mit Leidenschaft für Innovation und Exzellenz. Seit unserer Gründung haben wir es uns zur Aufgabe gemacht, unseren Kunden nicht nur Dienstleistungen, sondern echte Partnerschaften anzubauen.
+                    </p>
+                    <p class="text-lg leading-relaxed mb-6">
+                        Unsere Philosophie basiert auf Transparenz, Vertrauen und dem unermüdlichen Streben nach den besten Ergebnissen. Wir glauben, dass der Erfolg unserer Kunden unser eigener Erfolg ist.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Mit jahrelanger Erfahrung in verschiedenen Branchen sind wir bestens gerüstet, um die einzigartigen Herausforderungen Ihres Unternehmens zu verstehen und maßgeschneiderte Lösungen zu entwickeln, die wirklich wirken.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services/Features Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Unsere Dienstleistungen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.75 12L12.75 12L12.75 17L9.75 17ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Webentwicklung</h3>
+                    <p class="text-gray-600 text-center">
+                        Wir erstellen maßgeschneiderte, responsive und leistungsstarke Websites, die Ihre Marke optimal präsentieren.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Digitale Strategie</h3>
+                    <p class="text-gray-600 text-center">
+                        Entwickeln Sie eine effektive Online-Präsenz mit unserer umfassenden digitalen Marketingberatung.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1">
+                    <div class="text-indigo-600 mb-4">
+                        <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3s1.34-3 3-3zM3 12c0-2.61 1.67-4.83 4-5.65V4h2v2.35C11.33 6.17 13 8.39 13 11c0 2.61-1.67 4.83-4 5.65V20H7v-2.35c-2.33-.82-4-3.04-4-5.65z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">UI/UX Design</h3>
+                    <p class="text-gray-600 text-center">
+                        Benutzerzentriertes Design, das Ästhetik mit Funktionalität verbindet und begeistert.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="bg-indigo-700 text-white py-16 md:py-24 text-center shadow-inner">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Bereit für den nächsten Schritt?</h2>
+            <p class="text-lg md:text-xl mb-10 max-w-3xl mx-auto opacity-90">
+                Lassen Sie uns gemeinsam Ihr Projekt besprechen und Ihre Vision Wirklichkeit werden lassen.
+            </p>
+            <a href="mailto:info@ihre-firma.de" class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 hover:scale-105 transition duration-300 ease-in-out transform">
+                E-Mail senden
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 Ihr Unternehmen. Alle Rechte vorbehalten.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-300">Datenschutz</a>
+                <a href="#" class="hover:text-white transition duration-300">Impressum</a>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
